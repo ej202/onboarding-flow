@@ -1,0 +1,112 @@
+/* Global font style */
+body, #onboarding-container {
+  font-family: 'monsterrat', sans-serif; /* Update this line to the font you want to use */
+  background-color: #F7F7F7;
+}
+
+#onboarding-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px; /* Add some padding to the container */
+}
+
+/* Style for each step */
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+
+/* Style for the title */
+.step h1 {
+  margin: 0 auto 20px; /* Center the title with margin below */
+  font-size: 32px; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+/* Style for the paragraph */
+.step p {
+  width: 80%;
+  max-width: 400px; /* Set a maximum width */
+  margin: 0 auto 20px; /* Center the paragraph with margin */
+  font-size: 1.125rem;
+}
+
+/* Style for the question */
+.step h2 {
+  margin-bottom: 10%; /* Add margin to create space between the question and answers */
+  font-weight: normal;
+}
+
+/* Style for the buttons */
+.onboarding-btn {
+  width: 80%;
+  max-width: 400px; /* Set a maximum width */
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Continue button specific styles */
+#continue-btn {
+  background: #022B6D;
+  color: white;
+}
+
+/* Skip button specific styles */
+#skip-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Button hover effects */
+.onboarding-btn:hover {
+  opacity: 0.9;
+}
+
+/* Checkbox and radio styling */
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"] + span, input[type="radio"] + span {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px; /* Set a maximum width */
+  padding: 10px;
+  margin: -1.8% 0; /* Maintain the reduced margin to decrease spacing between answers */
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 700;
+  color: #000000;
+}
+
+input[type="checkbox"]:hover + span, input[type="radio"]:hover + span {
+  background-color: #16438F; /* Add hover effect for answers */
+  color: #ffffff;
+}
+
+input[type="checkbox"]:checked + span, input[type="radio"]:checked + span {
+  background-color: #16438F; /* #ccc */
+  border-color: #ccc;
+  color: #ffffff;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
